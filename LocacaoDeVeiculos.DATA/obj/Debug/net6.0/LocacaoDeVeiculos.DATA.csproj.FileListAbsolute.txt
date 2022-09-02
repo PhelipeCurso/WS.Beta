@@ -1,0 +1,12 @@
+C:\repos\MP.ApiDotNet6\WS.Beta\LocacaoDeVeiculos.DATA\bin\Debug\net6.0\LocacaoDeVeiculos.DATA.deps.json
+C:\repos\MP.ApiDotNet6\WS.Beta\LocacaoDeVeiculos.DATA\bin\Debug\net6.0\LocacaoDeVeiculos.DATA.dll
+C:\repos\MP.ApiDotNet6\WS.Beta\LocacaoDeVeiculos.DATA\bin\Debug\net6.0\LocacaoDeVeiculos.DATA.pdb
+C:\repos\MP.ApiDotNet6\WS.Beta\LocacaoDeVeiculos.DATA\obj\Debug\net6.0\LocacaoDeVeiculos.DATA.csproj.AssemblyReference.cache
+C:\repos\MP.ApiDotNet6\WS.Beta\LocacaoDeVeiculos.DATA\obj\Debug\net6.0\LocacaoDeVeiculos.DATA.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\MP.ApiDotNet6\WS.Beta\LocacaoDeVeiculos.DATA\obj\Debug\net6.0\LocacaoDeVeiculos.DATA.AssemblyInfoInputs.cache
+C:\repos\MP.ApiDotNet6\WS.Beta\LocacaoDeVeiculos.DATA\obj\Debug\net6.0\LocacaoDeVeiculos.DATA.AssemblyInfo.cs
+C:\repos\MP.ApiDotNet6\WS.Beta\LocacaoDeVeiculos.DATA\obj\Debug\net6.0\LocacaoDeVeiculos.DATA.csproj.CoreCompileInputs.cache
+C:\repos\MP.ApiDotNet6\WS.Beta\LocacaoDeVeiculos.DATA\obj\Debug\net6.0\LocacaoDeVeiculos.DATA.dll
+C:\repos\MP.ApiDotNet6\WS.Beta\LocacaoDeVeiculos.DATA\obj\Debug\net6.0\refint\LocacaoDeVeiculos.DATA.dll
+C:\repos\MP.ApiDotNet6\WS.Beta\LocacaoDeVeiculos.DATA\obj\Debug\net6.0\LocacaoDeVeiculos.DATA.pdb
+C:\repos\MP.ApiDotNet6\WS.Beta\LocacaoDeVeiculos.DATA\obj\Debug\net6.0\ref\LocacaoDeVeiculos.DATA.dll
