@@ -11,7 +11,6 @@ C:\repos\MP.ApiDotNet6\WS.Beta\WSBeta.WEB\bin\Debug\net6.0\MessagePack.dll
 C:\repos\MP.ApiDotNet6\WS.Beta\WSBeta.WEB\bin\Debug\net6.0\MessagePack.Annotations.dll
 C:\repos\MP.ApiDotNet6\WS.Beta\WSBeta.WEB\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\repos\MP.ApiDotNet6\WS.Beta\WSBeta.WEB\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\repos\MP.ApiDotNet6\WS.Beta\WSBeta.WEB\bin\Debug\net6.0\Microsoft.Build.Locator.dll
 C:\repos\MP.ApiDotNet6\WS.Beta\WSBeta.WEB\bin\Debug\net6.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
 C:\repos\MP.ApiDotNet6\WS.Beta\WSBeta.WEB\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
 C:\repos\MP.ApiDotNet6\WS.Beta\WSBeta.WEB\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -262,3 +261,6 @@ C:\repos\MP.ApiDotNet6\WS.Beta\WSBeta.WEB\obj\Debug\net6.0\refint\WSBeta.WEB.dll
 C:\repos\MP.ApiDotNet6\WS.Beta\WSBeta.WEB\obj\Debug\net6.0\WSBeta.WEB.pdb
 C:\repos\MP.ApiDotNet6\WS.Beta\WSBeta.WEB\obj\Debug\net6.0\WSBeta.WEB.genruntimeconfig.cache
 C:\repos\MP.ApiDotNet6\WS.Beta\WSBeta.WEB\obj\Debug\net6.0\ref\WSBeta.WEB.dll
+C:\repos\MP.ApiDotNet6\WS.Beta\WSBeta.WEB\bin\Debug\net6.0\Microsoft.Build.dll
+C:\repos\MP.ApiDotNet6\WS.Beta\WSBeta.WEB\bin\Debug\net6.0\Microsoft.Build.Framework.dll
+C:\repos\MP.ApiDotNet6\WS.Beta\WSBeta.WEB\bin\Debug\net6.0\Microsoft.NET.StringTools.dll

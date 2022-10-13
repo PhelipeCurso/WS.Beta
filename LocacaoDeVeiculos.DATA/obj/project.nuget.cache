@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MQgmG4hW45uwK9J6A5ELcB8LXyr/oy+xoGLQfD8+RqvVlB0wK9hEkJky9nCQAP9n7P8uFSktsiFNIlsa/zNNrw==",
+  "dgSpecHash": "dlDIAUqK+6Hv6NcdIpwu22gHyCS+NSmyQITqOUiGbTcI0mxGrozpfnsEBtEWI/PoD2pFADf8Vgufg1nQ3RpqBg==",
   "success": true,
   "projectFilePath": "C:\\repos\\MP.ApiDotNet6\\WS.Beta\\LocacaoDeVeiculos.DATA\\LocacaoDeVeiculos.DATA.csproj",
   "expectedPackageFiles": [
@@ -45,5 +45,12 @@
     "C:\\Users\\phelipe.santos\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\phelipe.santos\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://192.168.0.14:8084/nuget/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
 }

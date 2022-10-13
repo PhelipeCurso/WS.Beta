@@ -21,5 +21,42 @@ namespace WSBeta.WEB.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Create(Cliente model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            oClienteService.oRepositoryCliente.Incluir(model);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Details(int id)
+        {
+          Cliente oCliente = oClienteService.oRepositoryCliente.SelecionarPk(id);
+            return View(oCliente);
+        }
+
+        public IActionResult Edit(int id)
+        {
+            Cliente oCliente = oClienteService.oRepositoryCliente.SelecionarPk(id);
+            return View(oCliente);
+        }
+        [HttpPost]
+        public IActionResult Edit(Cliente model)
+        {
+           Cliente oCliente = oClienteService.oRepositoryCliente.Alterar(model);
+            
+            int id = oCliente.Id;
+
+            return RedirectToAction("Details", new {id});
+        }
+        public IActionResult Delete(int id)
+        {
+            return RedirectToAction("index");
+        }
     }
 }

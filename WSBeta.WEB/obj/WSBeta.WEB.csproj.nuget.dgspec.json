@@ -14,12 +14,14 @@
         "outputPath": "C:\\repos\\MP.ApiDotNet6\\WS.Beta\\LocacaoDeVeiculos.DATA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\V.S\\SDKs\\NuGetPackages"
+          "D:\\V.S\\SDKs\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\phelipe.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -27,7 +29,9 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "http://192.168.0.14:8084/nuget/nuget": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/ntZROmu8hdCjgv3sbjBdUqbsSj3SusVYtlenAZLBrhv5KaM1kg/api": {}
         },
         "frameworks": {
           "net6.0": {
@@ -84,12 +88,14 @@
         "outputPath": "C:\\repos\\MP.ApiDotNet6\\WS.Beta\\WSBeta.WEB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\V.S\\SDKs\\NuGetPackages"
+          "D:\\V.S\\SDKs\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\phelipe.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -97,7 +103,9 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "http://192.168.0.14:8084/nuget/nuget": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/ntZROmu8hdCjgv3sbjBdUqbsSj3SusVYtlenAZLBrhv5KaM1kg/api": {}
         },
         "frameworks": {
           "net6.0": {
@@ -139,7 +147,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.8, )"
+              "version": "[6.0.10, )"
             }
           },
           "imports": [

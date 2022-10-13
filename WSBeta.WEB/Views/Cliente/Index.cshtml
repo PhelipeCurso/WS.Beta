@@ -9,7 +9,7 @@
 <p>
     <a class="btn btn-primary" asp-action="Create">Novo Cliente</a>
 </p>
-<table class="table">
+<table id="myTable" class="table">
     <thead>
         <tr>
             <th>
@@ -48,8 +48,49 @@
                     <a asp-action="Edit"class="btn btn-success m-1" asp-route-id="@item.Id">Alterar</a>
                     <a asp-action="Details" class="btn btn-primary m-1" asp-route-id="@item.Id">Detalhes</a>
                     <a asp-action="Delete" class="btn btn-danger m-1" asp-route-id="@item.Id">Excluir</a>
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger m-1" data-toggle="modal" data-target="#DeleteModal">
+                        Excluir
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="DeleteModal-@item.Id" tabindex="-1" role="dialog" aria-labelledby="DeleteModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="DeleteModalLabel">Excluir cliente</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
             </td>
         </tr>
 }
     </tbody>
 </table>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+
+
+            $('#myTable').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.12.1/i18n/pt-BR.json"
+                }
+            });
+        });
+    </script>
+}
