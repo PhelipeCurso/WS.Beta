@@ -2,6 +2,8 @@
 
 @{
     ViewData["Title"] = "Clientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>Clientes</h1>
@@ -18,7 +20,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Cpf)
             </th>
-           
+
             <th>
                 @Html.DisplayNameFor(model => model.TelefoneCelular)
             </th>
@@ -29,56 +31,54 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cpf)
-            </td>
-            
-            <td>
-                @Html.DisplayFor(modelItem => item.TelefoneCelular)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TelefoneFixo)
-            </td>
-            <td class="col-md" >
-                    <a asp-action="Edit"class="btn btn-success m-1" asp-route-id="@item.Id">Alterar</a>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cpf)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.TelefoneCelular)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TelefoneFixo)
+                </td>
+                <td class="col-md">
+                    <a asp-action="Edit" class="btn btn-success m-1" asp-route-id="@item.Id">Alterar</a>
                     <a asp-action="Details" class="btn btn-primary m-1" asp-route-id="@item.Id">Detalhes</a>
-                    <a asp-action="Delete" class="btn btn-danger m-1" asp-route-id="@item.Id">Excluir</a>
+                   
 
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-danger m-1" data-toggle="modal" data-target="#DeleteModal">
+                    <button type="button" class="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#DeleteModal-@item.Id">
                         Excluir
                     </button>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="DeleteModal-@item.Id" tabindex="-1" role="dialog" aria-labelledby="DeleteModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
+                    <div class="modal fade" id="DeleteModal-@item.Id" tabindex="-1" aria-labelledby="DeleteModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="DeleteModalLabel">Excluir cliente</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                    <h5 class="modal-title" id="DeleteModalLabel">Excluir Cliente</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    ...
+                                    Deseja realmente excluir o cliente @item.Nome?
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                                    <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.Id">Sim</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-            </td>
-        </tr>
-}
+                    
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
 @section Scripts{
@@ -93,4 +93,5 @@
             });
         });
     </script>
+   
 }

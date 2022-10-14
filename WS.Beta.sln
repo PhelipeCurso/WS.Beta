@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocacaoDeVeiculos.DATA", "LocacaoDeVeiculos.DATA\LocacaoDeVeiculos.DATA.csproj", "{0EC66A7B-7992-4150-AB82-67F5D47A567D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocacaoDeVeiculos.DATA", "LocacaoDeVeiculos.DATA\LocacaoDeVeiculos.DATA.csproj", "{0EC66A7B-7992-4150-AB82-67F5D47A567D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSBeta.WEB", "WSBeta.WEB\WSBeta.WEB.csproj", "{37B51B3F-41CB-4591-82C4-EE50DB08BB79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSBeta.WEB", "WSBeta.WEB\WSBeta.WEB.csproj", "{37B51B3F-41CB-4591-82C4-EE50DB08BB79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

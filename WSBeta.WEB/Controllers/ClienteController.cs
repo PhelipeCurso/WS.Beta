@@ -56,6 +56,7 @@ namespace WSBeta.WEB.Controllers
         }
         public IActionResult Delete(int id)
         {
+            oClienteService.oRepositoryCliente.Excluir(id);
             return RedirectToAction("index");
         }
     }
