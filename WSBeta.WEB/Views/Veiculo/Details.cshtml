@@ -4,39 +4,41 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Detalhes do Veiculo</h1>
 
 <div>
-    <h4>Veiculo</h4>
+    <h4>Confira os detalhes abaixo</h4>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Modelo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Modelo)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Marca)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Marca)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ano)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Ano)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Tipo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Tipo)
-        </dd>
-    </dl>
+    <div>
+        <a asp-action="Edit" class="btn btn-success" asp-route-id="@Model?.Id">Editar</a>
+        <a class="btn btn-primary" asp-action="Index">Voltar</a>
+    </div>
+    <br/>
+    <div class="card">
+        <div class="card-header">Informações Pessoais</div>
+        <div class="card-body row">
+            <div class="col-md">
+
+
+                <div class="form-group col-md">
+                    <label>@Html.DisplayNameFor(model => model.Marca)</label>
+                    <input disabled class="form-control" value="@Html.DisplayFor(model => model.Marca)" />
+                </div>
+                <div class="form-group">
+                    <label>@Html.DisplayNameFor(model => model.Modelo)</label>
+                    <input disabled class="form-control" value="@Html.DisplayFor(model => model.Modelo)" />
+                </div>
+                <div class="form-group col-md">
+                    <label>@Html.DisplayNameFor(model => model.Ano)</label>
+                    <input disabled class="form-control" value="@Html.DisplayFor(model => model.Ano)" />
+                </div>
+                <div class="form-group">
+                    <label>@Html.DisplayNameFor(model => model.Tipo)</label>
+                    <input disabled class="form-control" value="@Html.DisplayFor(model => model.Tipo)" />
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
