@@ -1,73 +1,63 @@
-﻿@model IEnumerable<LocacaoDeVeiculos.DATA.Models.Cliente>
-
-@{
-    ViewData["Title"] = "Clientes";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-<head>
-    <title>Home</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<div class="w3-top">
-    <div class="w3-bar w3-theme-d2 w3-left-align">
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-        <a href="../Home" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
-        <a href="../Cliente" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Cliente</a>
-        <a href="../Veiculo" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Veiculo</a>
-        <a href="../Emprestimos" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Emprestimos</a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
-    </div>
-
-<h1>Clientes</h1>
+﻿@model IEnumerable<LocacaoDeVeiculos.DATA.Models.VwVeiculoCliente>
 
 <p>
-    <a class="btn btn-primary" asp-action="Create">Novo Cliente</a>
+    <a asp-action="Create">Create New</a>
 </p>
-<table id="myTable" class="table">
+<table id ="myTable" class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cpf)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cpf)
-            </th>
-
-            <th>
-                @Html.DisplayNameFor(model => model.TelefoneCelular)
+                @Html.DisplayNameFor(model => model.Marca)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TelefoneFixo)
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>          
+            <th>
+                @Html.DisplayNameFor(model => model.DataEmprestimo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataEntrega)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Entrega)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Cpf)
-                </td>
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.TelefoneCelular)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TelefoneFixo)
-                </td>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cpf)
+            /td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modelo)
+            </td>           
+            <td>
+                @Html.DisplayFor(modelItem => item.DataEmprestimo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataEntrega)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Entrega)
+            </td>
                 <td class="col-md">
                     <a asp-action="Edit" class="btn btn-success m-1" asp-route-id="@item.Id">Alterar</a>
                     <a asp-action="Details" class="btn btn-primary m-1" asp-route-id="@item.Id">Detalhes</a>
-                   
+
 
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#DeleteModal-@item.Id">
@@ -92,10 +82,10 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </td>
-            </tr>
-        }
+        </tr>
+}
     </tbody>
 </table>
 @section Scripts{
@@ -110,5 +100,5 @@
             });
         });
     </script>
-   
+
 }

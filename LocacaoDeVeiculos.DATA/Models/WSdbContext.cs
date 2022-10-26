@@ -21,6 +21,7 @@ namespace LocacaoDeVeiculos.DATA.Models
         public virtual DbSet<Cliente> Cliente { get; set; }
         public virtual DbSet<ClienteVeiculo> ClienteVeiculo { get; set; }
         public virtual DbSet<Veiculo> Veiculo { get; set; }
+        public virtual DbSet<VwVeiculoCliente> VwVeiculoCliente { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -48,6 +49,11 @@ namespace LocacaoDeVeiculos.DATA.Models
                     .HasForeignKey<ClienteVeiculo>(d => d.Id)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Cliente_Veiculo_Veiculo");
+            });
+
+            modelBuilder.Entity<VwVeiculoCliente>(entity =>
+            {
+                entity.ToView("VW_Veiculo_Cliente");
             });
 
             OnModelCreatingPartial(modelBuilder);
