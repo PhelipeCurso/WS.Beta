@@ -26,7 +26,7 @@
 <h1>Clientes</h1>
 
 <p>
-    <a class="btn btn-primary" asp-action="Create">Novo Cliente</a>
+    <a class="w3-bar-item w3-button w3-teal" asp-action="Create">Novo Cliente</a>
 </p>
 <table id="myTable" class="table">
     <thead>
@@ -65,7 +65,7 @@
                     @Html.DisplayFor(modelItem => item.TelefoneFixo)
                 </td>
                 <td class="col-md">
-                    <a asp-action="Edit" class="btn btn-success m-1" asp-route-id="@item.Id">Alterar</a>
+                        <a asp-action="Edit" class="w3-bar-item w3-button w3-teal" asp-route-id="@item.Id">Alterar</a>
                     <a asp-action="Details" class="btn btn-primary m-1" asp-route-id="@item.Id">Detalhes</a>
                    
 

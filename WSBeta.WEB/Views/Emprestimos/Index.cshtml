@@ -1,7 +1,26 @@
 ﻿@model IEnumerable<LocacaoDeVeiculos.DATA.Models.VwVeiculoCliente>
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+        <a href="../Home" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+        <a href="../Cliente" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Cliente</a>
+        <a href="../Veiculo" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Veiculo</a>
+        <a href="../Emprestimos" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Emprestimos</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+    </div>
 
 <p>
-    <a asp-action="Create">Create New</a>
+        <h1>Emprestimos</h1>
+
+        <a asp-action="Create" class="w3-bar-item w3-button w3-teal">Create New</a>
 </p>
 <table id ="myTable" class="table">
     <thead>
@@ -55,7 +74,7 @@
                 @Html.DisplayFor(modelItem => item.Entrega)
             </td>
                 <td class="col-md">
-                    <a asp-action="Edit" class="btn btn-success m-1" asp-route-id="@item.Id">Alterar</a>
+                        <a asp-action="Edit" class="w3-bar-item w3-button w3-teal" asp-route-id="@item.Id">Alterar</a>
                     <a asp-action="Details" class="btn btn-primary m-1" asp-route-id="@item.Id">Detalhes</a>
 
 
