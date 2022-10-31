@@ -12,5 +12,10 @@ namespace WSBeta.WEB.Controllers
            List<VwVeiculoCliente> oListVwVeiculoCliente = _service.oRepositoryVwVeiculoCliente.SelecionarTodos();
             return View(oListVwVeiculoCliente);
         }
+
+        public IActionResult Create()
+        {
+            return View();  
+        }
     }
 }

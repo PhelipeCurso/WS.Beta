@@ -31,6 +31,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/repos/MP.ApiDotNet6/WS.Beta/WSBeta.WEB/Views/Emprestimos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzdGltb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/repos/MP.ApiDotNet6/WS.Beta/WSBeta.WEB/Views/Emprestimos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzdGltb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
