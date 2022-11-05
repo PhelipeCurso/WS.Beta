@@ -1,10 +1,10 @@
-﻿@model LocacaoDeVeiculos.DATA.Models.ClienteVeiculo
+﻿@model EmprestimoViewModel
   
 
 <h4>Emprestimos</h4>
     <hr />
     <div>
-        <a class="w3-bar-item w3-button w3-teal" asp-action="Index">Voltar</a>
+    <a class="btn btn-outline-primary m-1" asp-action="Index">Voltar</a>
     </div>
 <hr />
 
@@ -16,29 +16,103 @@
                 <div class="card-body row">
                     <div class="col-md">
 
+                    <table id="ListClienteTable" class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.oCliente.Nome)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.oCliente.Cpf)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.oCliente.TelefoneCelular)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.oCliente.TelefoneFixo)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.oListCliente)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Nome)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Cpf)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TelefoneCelular)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TelefoneFixo)
+                                    </td>
+                                   
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                    <table id="ListVeiculoTable" class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.oVeiculo.Modelo)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.oVeiculo.Marca)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.oVeiculo.Ano)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.oVeiculo.Tipo)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.oListVeiculo)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Modelo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Marca)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Ano)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Tipo)
+                                    </td>
+                                    
+                                </tr>
+
+
+                            }
+                        </tbody>
+                    </table>
+            
             <div class="form-group">
-                <label asp-for="IdCliente" class="control-label">Cliente</label>
-                <input asp-for="IdCliente" class="form-control" />
-                <span asp-validation-for="IdCliente" class="text-danger"></span>
+                <label asp-for="dataEmprestimo" class="control-label">Data Emprestimo</label>
+                    <input asp-for="dataEmprestimo" class="form-control" />
+                    <span asp-validation-for="dataEmprestimo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DataEmprestimo" class="control-label">Data Emprestimo</label>
-                <input asp-for="DataEmprestimo" class="form-control" />
-                <span asp-validation-for="DataEmprestimo" class="text-danger"></span>
+                <label asp-for="dataEntrega" class="control-label">Data Entrega</label>
+                <input asp-for="dataEntrega" class="form-control" />
+                <span asp-validation-for="dataEntrega" class="text-danger"></span>
             </div>
+             <br />
             <div class="form-group">
-                <label asp-for="DataEntrega" class="control-label">Data Entrega</label>
-                <input asp-for="DataEntrega" class="form-control" />
-                <span asp-validation-for="DataEntrega" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Entrega" class="control-label">Entregue</label>
-                <input asp-for="Entrega" class="form-control" />
-                <span asp-validation-for="Entrega" class="text-danger"></span>
-            </div>
-            <br />
-            <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-primary" />
+                        <input type="submit" value="Salvar" class="btn btn-outline-success m-1" />
             </div>
         </form>
     </div>
@@ -46,6 +120,22 @@
 
 
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+
+            $('#ListClienteTable').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.12.1/i18n/pt-BR.json"
+                }
+            });
+         
+            $('#ListVeiculoTable').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.12.1/i18n/pt-BR.json"
+                }
+            });
+        });
+    </script>
+
 }

@@ -1,6 +1,7 @@
 ﻿using LocacaoDeVeiculos.DATA.Models;
 using LocacaoDeVeiculos.DATA.Services;
 using Microsoft.AspNetCore.Mvc;
+using WSBeta.WEB.Models;
 
 namespace WSBeta.WEB.Controllers
 {
@@ -15,7 +16,14 @@ namespace WSBeta.WEB.Controllers
 
         public IActionResult Create()
         {
-            return View();  
+            EmprestimoViewModel oEmprestimoViewModel= new EmprestimoViewModel();
+            List<Veiculo> oListVeiculos =_service.oRepositoryVeiculo.SelecionarTodos();
+            List<Cliente> oListCliente = _service.oRepositoryCliente.SelecionarTodos();
+            oEmprestimoViewModel.oListCliente = oListCliente;
+            
+            oEmprestimoViewModel.oListVeiculo = oListVeiculos;
+
+            return View(oEmprestimoViewModel);  
         }
     }
 }

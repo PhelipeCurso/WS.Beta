@@ -12,9 +12,14 @@ namespace LocacaoDeVeiculos.DATA.Services
     {
         public RepositoryVwVeiculoCliente oRepositoryVwVeiculoCliente { get; set; }  
 
+        public RepositoryVeiculo oRepositoryVeiculo { get; set; }
+        public RepositoryCliente oRepositoryCliente { get; set; }
+
         public VeiculoClienteService()
         {
             oRepositoryVwVeiculoCliente = new RepositoryVwVeiculoCliente();
+            oRepositoryCliente = new RepositoryCliente();
+            oRepositoryVeiculo = new RepositoryVeiculo();
         }
 
     }
